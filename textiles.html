@@ -1,24 +1,93 @@
-<?php
-$contact_name = $_POST['name'];
-$contact_email = $_POST['email'];
-$contact_subject = $_POST['subject'];
-$contact_message = $_POST['message'];
-
-if( $contact_name == true )
-{
-	$sender = $contact_email;
-	$receiver = "syra@infinitum.com.mx";
-	$client_ip = $_SERVER['REMOTE_ADDR'];
-	$email_body = "Name: $contact_name \nEmail: $sender \nSubject: $contact_subject \nMessage: $contact_message";		
-	$extra = "From: $sender\r\n" . "Reply-To: $sender \r\n" . "X-Mailer: PHP/" . phpversion();
-
-	if( mail( $receiver, "Mensaje desde tienda syra - $subject", $email_body, $extra ) ) 
-	{
-		echo "success=yes";
-	}
-	else
-	{
-		echo "success=no";
-	}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>::: Syra ::::</title>
+<script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
+<style type="text/css">
+<!--
+body {
+	background-color: #d4a160;
+	margin-top: 0px;
 }
-?>
+.footer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	color: #633;
+	text-align: center;
+}
+-->
+</style></head>
+
+<body>
+<table width="726" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="3"><div align="center"><img src="img/menuheader-home.jpg" alt="Syra" width="726" height="77" border="0" usemap="#Map2" />
+        <map name="Map2" id="Map22">
+          <area shape="rect" coords="191,22,320,50" href="hechoamano.html" />
+          <area shape="rect" coords="124,24,178,49" href="inicio.html" />
+          <area shape="rect" coords="334,25,419,49" href="http://syra.com.mx/tienda" />
+          <area shape="rect" coords="433,25,603,49" href="textiles.html" />
+          <area shape="rect" coords="623,25,713,52" href="contacto.html" />
+        </map>
+    </div></td>
+  </tr>
+  <tr>
+    <td colspan="3" bgcolor=""><div align="center">
+      <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="726" height="463">
+        <param name="movie" value="textiles.swf" />
+        <param name="quality" value="high" />
+        <param name="wmode" value="opaque" />
+        <param name="swfversion" value="6.0.65.0" />
+        <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+        <param name="expressinstall" value="../Scripts/expressInstall.swf" />
+        <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="textiles.swf" width="726" height="463">
+          <!--<![endif]-->
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <param name="swfversion" value="6.0.65.0" />
+          <param name="expressinstall" value="../Scripts/expressInstall.swf" />
+          <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+          <div>
+            <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+    </div></td>
+  </tr>
+  <tr>
+    <td colspan="3"><img src="img/destacados.jpg" width="726" height="180" border="0" usemap="#Map2Map" />
+      <map name="Map2Map" id="Map2Map2"><area shape="rect" coords="599,6,729,166" href="http://syra.com.mx/tienda" />
+      	<area shape="rect" coords="451,5,581,165" href="http://syra.com.mx/tienda" />
+      	<area shape="rect" coords="301,5,431,165" href="http://syra.com.mx/tienda" />
+      	<area shape="rect" coords="151,7,281,167" href="http://syra.com.mx/tienda" />
+        <area shape="rect" coords="-1,4,129,164" href="http://syra.com.mx/tienda" />
+      </map>
+      <map name="Map2Map" id="Map2Map">
+        <area shape="rect" coords="0,4,130,164" href="http://syra.dsindigo.com/" />
+    </map></td>
+  </tr>
+  <tr>
+    <td width="255" class="footer"><a href="#"><img src="img/logo-fbook.jpg" style="border:0px;" alt="" width="151" height="40" align="left" /></a><a href="http://www.cocoletas.com.mx/"><img style="border:0px;margin-left:5px;" src="img/logo-cocoletas.jpg" alt="" width="87" height="40" align="left" /></a></td>
+    <td width="307" class="footer">Syra &reg; M&eacute;xico 2010 Derechos Reservados</td>
+    <td width="146" class="footer"><img src="img/logo-paypal.jpg" alt="" width="83" height="33" align="right" /></td>
+  </tr>
+</table>
+<div align="center"> </div>
+<map name="Map2" id="Map2">
+	<area shape="rect" coords="122,24,176,49" href="inicio.html" />
+	<area shape="rect" coords="334,25,419,49" href="http://syra.com.mx/tienda" />
+</map>
+<script type="text/javascript">
+<!--
+swfobject.registerObject("FlashID");
+//-->
+</script>
+</body>
+</html>
